@@ -1,0 +1,13 @@
+{
+  "name": "calendarmate",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.x",
+    "npm": ">=8.x"
+  },
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "postinstall": "cd frontend && npm install"
+  }
+}
