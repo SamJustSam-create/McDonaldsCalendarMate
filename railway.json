@@ -1,13 +1,12 @@
 {
-  "name": "calendarmate",
-  "version": "1.0.0",
-  "engines": {
-    "node": ">=16.x",
-    "npm": ">=8.x"
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "nixpacks"
   },
-  "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "node backend/server.js",
-    "postinstall": "cd frontend && npm install"
+  "deploy": {
+    "numReplicas": 1,
+    "startCommand": "npm start",
+    "restartPolicyType": "on_failure",
+    "restartPolicyMaxRetries": 5
   }
 }
